@@ -3,8 +3,18 @@
   <title>Interface-License-Plate-Recognition</title>
 
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   </head>
   <body>
+
+  <ul id="nav">
+    <li><img src="img/logo.png" alt=""></li>
+    <li><a href="#"><span class="material-icons"><p class="icon">list</p></span></a></li>
+    <li><a href="#"><span class="material-icons"><p class="icon"> face</p></span></a></li>
+    <li><a href="#"><span class="material-icons"><p class="icon">dashboard</p></span></a></li>
+
+  </ul>
+
   <section class="content">
     <div class="box_resu">
 			
