@@ -1,18 +1,17 @@
 <html>
   <head>
-    
+  <title>Interface-License-Plate-Recognition</title>
+
+<link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <h1>Buscar Placas<h1>
-      <div>
-        <form id="formulario" method="post">
-          <input type="text" name="placa" id="placa" placeholder="placa">
-            <button type="submit" >Pesquisar</button>
-        </form>
+  <section class="content">
+    <div class="box_resu">
+			
       </div>
+</section>
 
-      <div id="resultado">
-</div>
+     
 
       <script
   src="https://code.jquery.com/jquery-3.5.1.min.js"
