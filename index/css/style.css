@@ -7,6 +7,17 @@
 body {
 	background : #F5F5F5;
 	font-family: 'Segoe UI', 'Arial';
+
+}
+
+h3 {
+	margin     : 0 140px auto 180px;
+	text-align : center;
+	width      : auto;
+	font-family: 'Montserrat', sans-serif;
+	padding    : 50px 0;
+	font-size  : 50px;
+	color      : #0095ff;
 }
 
 h1,
@@ -30,57 +41,60 @@ ul {
 	padding         : 0;
 	list-style      : none;
 	height          : 100%;
+	float           : left;
+	z-index         : 1;
 }
 
 .icon {
-	position      : relative;
-	
+	position: relative;
 
-	display       : table;
+
+	display: table;
 
 	top: 50%;
-	
-	left: 50%;
-  margin-left: -12.5px;
-	
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
+
+	left       : 50%;
+	margin-left: -12.5px;
+
+	-webkit-transform: translateY(-50%);
+	transform        : translateY(-50%);
 
 
-	font-size     : 25px;
-	color         : #ffffff;
+	font-size: 25px;
+	color    : #ffffff;
 
 
 
-	
-	
+
+
 
 
 }
+
 ul li img {
-	width          : 45px;
-	height         : 45px;
+	width   : 45px;
+	height  : 45px;
 	position: relative;
-padding : 2px;
+	padding : 2px;
 
 
 
 }
 
 ul li a span {
-	
-	width          : 45px;
-	height         : 45px;
-	position       : relative;
+
+	width   : 45px;
+	height  : 45px;
+	position: relative;
 
 
-	
+
 }
 
 
 ul li {
 	position: relative;
-padding : 10px 20px;
+	padding : 10px 20px;
 
 
 
@@ -95,11 +109,11 @@ li ul {
 }
 
 ul li a {
-	display        : block;
-	text-decoration: none;
+	display            : block;
+	text-decoration    : none;
 	transition-duration: 0.75s;
 
-	
+
 }
 
 li:hover ul {
@@ -107,19 +121,22 @@ li:hover ul {
 }
 
 ul li a:hover {
-	text-decoration: underline;
-	font-weight    : bold;
-	border-radius: 4px;
-	background     : #66bfff;
+	text-decoration    : underline;
+	font-weight        : bold;
+	border-radius      : 4px;
+	background         : #66bfff;
 	transition-duration: 0.75s;
 }
 
 /*Fim Menu*/
 
 section {
-	width     : 1000px;
-	height    : 100vh;
+	position  : relative;
+	width     : auto;
+	height    : auto;
+	padding: 20px;
 	background: #fff;
 	box-shadow: 0px 0px 10px #CCC;
-	margin    : 0 auto;
+	margin    : 0 130px auto 160px;
+
 }

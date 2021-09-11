@@ -8,7 +8,7 @@ function getVeiculos() {
         $('.box_resu').empty();
         for (var i = 0; i < result.length; i++) {
            
-            $('.box_resu').prepend('<div class="elements"><h4>' + result[i].placa + '</h4><p>' + result[i].cor + '</p></div>');
+            $('.box_resu').prepend('<tr><td>' + result[i].entrada + '</td><td>' + result[i].saida + '</td><td>' + result[i].placa + '</td><td>' + result[i].permi + '</td></tr>');
         }
     });
     setTimeout(getVeiculos, 10000);

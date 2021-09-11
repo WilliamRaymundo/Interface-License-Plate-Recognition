@@ -3,25 +3,41 @@
   <title>Interface-License-Plate-Recognition</title>
 
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/materialize.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+
+
   </head>
   <body>
 
-  <ul id="nav">
+  <ul>
     <li><img src="img/logo.png" alt=""></li>
     <li><a href="#"><span class="material-icons"><p class="icon">list</p></span></a></li>
     <li><a href="#"><span class="material-icons"><p class="icon"> face</p></span></a></li>
     <li><a href="#"><span class="material-icons"><p class="icon">dashboard</p></span></a></li>
 
   </ul>
-
+<h3>Histórico</h3>
   <section class="content">
-    <div class="box_resu">
-			
-      </div>
+        <table class="striped">
+          <thead>
+            <tr>
+              <th>Entrada</th>
+              <th>Saida</th>
+              <th>Placa</th>
+              <th>Permissão</th>
+              <th>Ação</th>
+            </tr>
+          <thead>
+            <tbody class="box_resu">
+              
+        <tbody>
+      </table>
 </section>
 
-     
+
 
       <script
   src="https://code.jquery.com/jquery-3.5.1.min.js"
