@@ -14,11 +14,12 @@
 
   <ul>
     <li><img src="img/logo.png" alt=""></li>
-    <li><a href="#"><span class="material-icons"><p class="icon">list</p></span></a></li>
-    <li><a href="#"><span class="material-icons"><p class="icon"> face</p></span></a></li>
+    <li><a href="#" id="historico"><span class="material-icons"><p class="icon">list</p></span></a></li>
+    <li><a href="#" id="usuarios"><span class="material-icons"><p class="icon"> face</p></span></a></li>
     <li><a href="#"><span class="material-icons"><p class="icon">dashboard</p></span></a></li>
 
   </ul>
+<div id="menu">
 <h3>Histórico</h3>
   <section class="content">
         <table class="striped">
@@ -36,6 +37,7 @@
         <tbody>
       </table>
 </section>
+</div>
 
 
 
