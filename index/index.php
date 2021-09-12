@@ -19,6 +19,8 @@
     <li><a href="#"id="veiculos"><span class="material-icons"><p class="icon">dashboard</p></span></a></li>
 
   </ul>
+  <div id="formulario">
+</div>
 <div id="menu">
 <h3>Histórico</h3>
   <section class="content">
@@ -41,13 +43,15 @@
 
 
 
+
+
       <script
   src="https://code.jquery.com/jquery-3.5.1.min.js"
   integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
   crossorigin="anonymous"></script>
 
   <script src="js/main.js"></script>
-
+  <script src="js/materialize.js"></script>
 
   </body>
 </html>

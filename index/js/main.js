@@ -39,7 +39,7 @@ function getUsuarios() {
         $('.box_usu').empty();
         for (var i = 0; i < result.length; i++) {
 
-            $('.box_usu').prepend('<tr><td>' + result[i].CPF + '</td><td>' + result[i].Nome + '</td></tr>');
+            $('.box_usu').prepend('<tr><td>' + result[i].CPF + '</td><td>' + result[i].Nome + '</td><td><a href="#" class="btn-floating orange"><i class="material-icons">edit</i></a><a href="#" class="btn-floating red"><i class="material-icons">delete</i></a></td></tr>');
         }
     });
 }
@@ -58,11 +58,16 @@ function getVeiculos() {
     });
 }
 
+function usucadastro(){
+    document.getElementById( 'formulario' ).style.display = 'block';
+    $('#formulario').empty();
+    $('#formulario').prepend('<h3>Usuários</h3>');
+}
 
 
 $("#usuarios").click(function () {
     $('#menu').empty();
-    $('#menu').prepend('<h3>Usuários</h3><section class="content"><table class="striped"><thead><tr><th>CPF</th> <th>Nome</th><th>Ação</th> </tr><thead><tbody class="box_usu"><tbody></table></section>');
+    $('#menu').prepend('<h3>Usuários</h3><section class="content"><a class="btn" onclick="usucadastro()">Adicionar<a><table class="striped"><thead><tr><th>CPF</th> <th>Nome</th><th>Ação</th> </tr><thead><tbody class="box_usu"><tbody></table></section>');
     getUsuarios();
 });
 $("#historico").click(function () {
@@ -76,3 +81,4 @@ $("#veiculos").click(function () {
     $('#menu').prepend('<h3>Veículo</h3><section class="content"><table class="striped"><thead><tr><th>Placa</th><th>Permissão</th><th>Ação</th> </tr><thead><tbody class="box_vei"><tbody></table></section>');
     getVeiculos();
 });
+

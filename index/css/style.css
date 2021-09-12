@@ -70,6 +70,15 @@ ul {
 
 
 }
+#formulario {
+	display: none;
+	background-color: #152029;
+	width: 50%;
+	height: 100%;
+	left:50%;
+	position:fixed;
+	z-index:99;
+}
 
 ul li img {
 	width   : 45px;
