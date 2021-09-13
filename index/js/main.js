@@ -58,16 +58,12 @@ function getVeiculos() {
     });
 }
 
-function usucadastro(){
-    document.getElementById( 'formulario' ).style.display = 'block';
-    $('#formulario').empty();
-    $('#formulario').prepend('<h3>Usuários</h3>');
-}
+
 
 
 $("#usuarios").click(function () {
     $('#menu').empty();
-    $('#menu').prepend('<h3>Usuários</h3><section class="content"><a class="btn" onclick="usucadastro()">Adicionar<a><table class="striped"><thead><tr><th>CPF</th> <th>Nome</th><th>Ação</th> </tr><thead><tbody class="box_usu"><tbody></table></section>');
+    $('#menu').prepend('<h3>Usuários</h3><section class="content"><a class="btn" onclick="abrirPag('+"'"+'conecta.php'+"'"+');">Adicionar</a><table class="striped"><thead><tr><th>CPF</th> <th>Nome</th><th>Ação</th> </tr><thead><tbody class="box_usu"><tbody></table></section>');
     getUsuarios();
 });
 $("#historico").click(function () {
@@ -82,3 +78,39 @@ $("#veiculos").click(function () {
     getVeiculos();
 });
 
+function GetXMLHttp() {
+    if (navigator.appName == "Microsoft Internet Explorer") {
+        xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    else {
+        xmlHttp = new XMLHttpRequest();
+    }
+    return xmlHttp;
+}
+
+var xmlRequest = GetXMLHttp();
+
+function abrirPag(valor){
+    var url = valor;
+ 
+    xmlRequest.open("GET",url,true);    
+    xmlRequest.onreadystatechange = mudancaEstado;
+    xmlRequest.send(null);
+ 
+        if (xmlRequest.readyState == 1) {
+            document.getElementById("formulario").innerHTML = "<h1>Olá</h1>";
+        }
+ 
+    return url;
+}
+ 
+function mudancaEstado(){
+    if (xmlRequest.readyState == 4){
+        document.getElementById('formulario').style.display = 'block';
+        document.getElementById("formulario").innerHTML = xmlRequest.responseText;
+    }
+
+}
+function fecharPagUsu(){
+    document.getElementById('formulario').style.display = 'none';
+}

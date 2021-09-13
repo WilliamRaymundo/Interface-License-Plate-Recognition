@@ -70,9 +70,18 @@ ul {
 
 
 }
+@keyframes yourAnimation {
+    0.0%{
+        opacity: 0;
+    }
+    25.7%{
+        opacity: 1;
+    }
+}
 #formulario {
+	animation: yourAnimation 3s ease 0s infinite normal none;
 	display: none;
-	background-color: #152029;
+	background-color: #ffffff;
 	width: 50%;
 	height: 100%;
 	left:50%;

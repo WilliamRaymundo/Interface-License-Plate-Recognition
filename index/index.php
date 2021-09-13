@@ -24,6 +24,7 @@
 <div id="menu">
 <h3>Histórico</h3>
   <section class="content">
+  
         <table class="striped">
           <thead>
             <tr>
