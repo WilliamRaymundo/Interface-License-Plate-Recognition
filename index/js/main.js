@@ -63,7 +63,7 @@ function getVeiculos() {
 
 $("#usuarios").click(function () {
     $('#menu').empty();
-    $('#menu').prepend('<h3>Usuários</h3><section class="content"><a class="btn" onclick="abrirPag('+"'"+'conecta.php'+"'"+');">Adicionar</a><table class="striped"><thead><tr><th>CPF</th> <th>Nome</th><th>Ação</th> </tr><thead><tbody class="box_usu"><tbody></table></section>');
+    $('#menu').prepend('<h3>Usuários</h3><section class="content"><a class="btn" onclick="abrirPag('+"'"+'conecta.php'+"'"+');">Adicionar</a><a class="btn" onclick="abrirPag('+"'"+'formulario/tipousuario.php'+"'"+');">Criar Tipo</a><table class="striped"><thead><tr><th>CPF</th> <th>Nome</th><th>Ação</th> </tr><thead><tbody class="box_usu"><tbody></table></section>');
     getUsuarios();
 });
 $("#historico").click(function () {

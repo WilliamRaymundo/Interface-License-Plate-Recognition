@@ -79,7 +79,7 @@ ul {
     }
 }
 #formulario {
-	animation: yourAnimation 3s ease 0s infinite normal none;
+	animation: yourAnimation 3s ease 0s normal none;
 	display: none;
 	background-color: #ffffff;
 	width: 50%;
