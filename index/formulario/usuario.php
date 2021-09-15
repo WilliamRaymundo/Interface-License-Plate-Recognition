@@ -1,5 +1,22 @@
 <?php
+// definições de host, database, usuário e senha
+$host = "localhost";
+$db   = "licence";
+$user = "root";
+$pass = "";
+// conecta ao banco de dados
+$pdo = new PDO('mysql:host=localhost; dbname=licence;', 'root', '');
 
+// seleciona a base de dados em que vamos trabalhar
+mysql_select_db($db, $pdo);
+// cria a instrução SQL que vai selecionar os dados
+$query = sprintf("SELECT nomeCat, nivelPermi FROM tipousuario");
+// executa a query
+$dados = mysql_query($query, $con) or die(mysql_error());
+// transforma os dados em um array
+$linha = mysql_fetch_assoc($dados);
+// calcula quantos dados retornaram
+$total = mysql_num_rows($dados);
 ?>
 <html>
 
@@ -33,8 +50,9 @@
         <div class="input-field col s12">
             <input type="text" name="senha" id="senha">
             <label for="senha">Senha</label>
-        
         </div>
+  
+
         <button type="submit" class="btn">Cadastrar</button>
     </form>
     </div>

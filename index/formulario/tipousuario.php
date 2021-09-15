@@ -24,17 +24,14 @@
             <label for="nomeCat">Nome tipo</label>
         </div>
 
+
         <div class="input-field col s12">
-            <input type="text" name="nome" id="nome">
-            <label for="nome">Nome</label>
+            <input type="number" min="1" max="99" name="nome" id="nome">
+            <label for="nome">Permissão</label>
         
         </div>
 
-        <div class="input-field col s12">
-            <input type="text" name="senha" id="senha">
-            <label for="senha">Senha</label>
         
-        </div>
         <button type="submit" class="btn">Cadastrar</button>
     </form>
     </div>

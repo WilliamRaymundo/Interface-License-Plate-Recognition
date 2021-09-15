@@ -1,3 +1,17 @@
+<?php
+$user = "root"; 
+$password = ""; 
+$database = "licence"; 
+
+# O hostname deve ser sempre localhost 
+$hostname = "localhost"; 
+
+# Conecta com o servidor de banco de dados 
+$conexao = mysqli_connect( $hostname, $user, $password ) or die( ' Erro na conexão ' ); 
+mysqli_select_db($conexao, $database);
+$query = "SELECT * FROM tipousuario"; 
+$result_query = mysqli_query($conexao, $query ) or die(' Erro na query:' );
+?>
 <html>
   <head>
   <title>Interface-License-Plate-Recognition</title>
@@ -23,8 +37,19 @@
 </div>
 <div id="menu">
 <h3>Histórico</h3>
+
+
+
   <section class="content">
-  
+  <?php
+
+# Exibe os registros na tela 
+while ($row = mysqli_fetch_array( $result_query )) 
+{ 
+      print $row['nomeCat']; 
+}
+
+?>
         <table class="striped">
           <thead>
             <tr>
