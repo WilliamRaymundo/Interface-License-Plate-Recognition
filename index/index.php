@@ -41,15 +41,24 @@ $result_query = mysqli_query($conexao, $query ) or die(' Erro na query:' );
 
 
   <section class="content">
+
+  
+  <label>Browser Select</label>
+  <select class="browser-default">
   <?php
 
 # Exibe os registros na tela 
 while ($row = mysqli_fetch_array( $result_query )) 
 { 
-      print $row['nomeCat']; 
+  ?><option value="1">   <?php print $row['nomeCat']; ?> </option> <?php
 }
 
 ?>
+ </select>
+    
+
+
+  
         <table class="striped">
           <thead>
             <tr>

@@ -1,22 +1,16 @@
 <?php
-// definições de host, database, usuário e senha
-$host = "localhost";
-$db   = "licence";
-$user = "root";
-$pass = "";
-// conecta ao banco de dados
-$pdo = new PDO('mysql:host=localhost; dbname=licence;', 'root', '');
+$user = "root"; 
+$password = ""; 
+$database = "licence"; 
 
-// seleciona a base de dados em que vamos trabalhar
-mysql_select_db($db, $pdo);
-// cria a instrução SQL que vai selecionar os dados
-$query = sprintf("SELECT nomeCat, nivelPermi FROM tipousuario");
-// executa a query
-$dados = mysql_query($query, $con) or die(mysql_error());
-// transforma os dados em um array
-$linha = mysql_fetch_assoc($dados);
-// calcula quantos dados retornaram
-$total = mysql_num_rows($dados);
+# O hostname deve ser sempre localhost 
+$hostname = "localhost"; 
+
+# Conecta com o servidor de banco de dados 
+$conexao = mysqli_connect( $hostname, $user, $password ) or die( ' Erro na conexão ' ); 
+mysqli_select_db($conexao, $database);
+$query = "SELECT * FROM tipousuario"; 
+$result_query = mysqli_query($conexao, $query ) or die(' Erro na query:' );
 ?>
 <html>
 
@@ -51,6 +45,16 @@ $total = mysql_num_rows($dados);
             <input type="text" name="senha" id="senha">
             <label for="senha">Senha</label>
         </div>
+
+        <label>Browser Select</label>
+  <select class="browser-default">
+    
+    <option value="" disabled selected>Choose your option</option>
+    <option value="1">Option 1</option>
+    <option value="2">Option 2</option>
+    <option value="3">Option 3</option>
+  </select>
+
   
 
         <button type="submit" class="btn">Cadastrar</button>
