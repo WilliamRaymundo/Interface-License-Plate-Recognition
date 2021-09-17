@@ -3,7 +3,7 @@
 
     
     $_fk_local = $_POST['fk_local'];
-    $_entrada = $_POST['fk_local'];
+    $_entrada = $_POST['entrada'];
     $_saida = $_POST['saida'];
     $_capPlaca = $_POST['capPlaca'];
     $_Permi = $_POST['Permi'];
