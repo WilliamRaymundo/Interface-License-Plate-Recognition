@@ -44,19 +44,22 @@ $result_query = mysqli_query($conexao, $query ) or die(' Erro na query:' );
         <div class="input-field col s12">
             <input type="text" name="senha" id="senha">
             <label for="senha">Senha</label>
+        
         </div>
 
-        <label>Browser Select</label>
+        <label>Tipo Usuário</label>
   <select class="browser-default">
-    
-    <option value="" disabled selected>Choose your option</option>
-    <option value="1">Option 1</option>
-    <option value="2">Option 2</option>
-    <option value="3">Option 3</option>
-  </select>
+  <?php
 
-  
+# Exibe os registros na tela 
+while ($row = mysqli_fetch_array( $result_query )) 
+{ 
+  ?><option value="<?php print $row['nivelPermi']; ?>">  <?php print $row['nomeCat']; ?> </option> <?php
+}
 
+?>
+ </select>
+ <br>
         <button type="submit" class="btn">Cadastrar</button>
     </form>
     </div>

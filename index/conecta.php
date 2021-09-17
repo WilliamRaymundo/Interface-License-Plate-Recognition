@@ -1,55 +1,26 @@
 <?php
+    header('Content-Type: application/json');
 
-?>
-<html>
-
-<head>
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/materialize.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
-</head>
-
-<body>
-  <button class="waves-effect waves-teal btn-flat" ><i class="material-icons" onclick="fecharPagUsu()">close</i></button>
-  <div class="row">
     
-    <div class="col s12 m10 push-m1">
-      <h3 class="light">Novo Usuário</h3>
-    <form>
-      
-        <div class="input-field col s12">
-            <input type="text" name="CPF" id="CPF">
-            <label for="CPF">CPF</label>
-        </div>
+    $_fk_local = $_POST['fk_local'];
+    $_entrada = $_POST['fk_local'];
+    $_saida = $_POST['saida'];
+    $_capPlaca = $_POST['capPlaca'];
+    $_Permi = $_POST['Permi'];
+    $_captura = $_POST['captura'];
 
-        <div class="input-field col s12">
-            <input type="text" name="nome" id="nome">
-            <label for="nome">Nome</label>
-        
-        </div>
+    $pdo = new PDO('mysql:host=localhost; dbname=licence;', 'root', '');
+    echo $_fk_local;
 
-        <div class="input-field col s12">
-            <input type="text" name="senha" id="senha">
-            <label for="senha">Senha</label>
-        
-        </div>
-        <button type="submit" class="btn">Cadastrar</button>
-    </form>
-    </div>
-    </div>
+    $stmt = $pdo->prepare('INSERT INTO historico (fk_local, Entrada, Saida, capPlaca, Permi, captura) VALUES (:na, :co, :ca, :aa, :ao, :ba)');
+    $stmt->bindValue(':na', $_fk_local);
+    $stmt->bindValue(':co', $_entrada);
+    $stmt->bindValue(':ca', $_saida);
+    $stmt->bindValue(':aa', $_capPlaca);
+    $stmt->bindValue(':ao', $_Permi);
+    $stmt->bindValue(':ba', $_captura);
+    $stmt->execute();
 
-    <script
-  src="https://code.jquery.com/jquery-3.5.1.min.js"
-  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-  crossorigin="anonymous"></script>
-
-  <script src="js/main.js"></script>
-  <script src="js/materialize.js"></script>
-   
-</body>
-
-
-
-</htmL>
+  
+?>
+    
