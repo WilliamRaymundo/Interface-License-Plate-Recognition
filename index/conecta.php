@@ -10,11 +10,11 @@
     $_captura = $_POST['captura'];
 
     $pdo = new PDO('mysql:host=localhost; dbname=licence;', 'root', '');
-    echo $_fk_local;
+    echo $_entradadate = date($_entrada,time());
 
     $stmt = $pdo->prepare('INSERT INTO historico (fk_local, Entrada, Saida, capPlaca, Permi, captura) VALUES (:na, :co, :ca, :aa, :ao, :ba)');
     $stmt->bindValue(':na', $_fk_local);
-    $stmt->bindValue(':co', $_entrada);
+    $stmt->bindValue(':co', $_entradadate);
     $stmt->bindValue(':ca', $_saida);
     $stmt->bindValue(':aa', $_capPlaca);
     $stmt->bindValue(':ao', $_Permi);
