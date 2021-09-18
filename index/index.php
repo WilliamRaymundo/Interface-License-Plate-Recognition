@@ -15,7 +15,7 @@ $result_query = mysqli_query($conexao, $query ) or die(' Erro na query:' );
 <html>
   <head>
   <title>Interface-License-Plate-Recognition</title>
-
+  <link rel="icon" href="img/logo.png">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/materialize.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">

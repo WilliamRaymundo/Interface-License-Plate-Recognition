@@ -12,14 +12,14 @@ function getHistorico() {
         $('.box_resu').empty();
         for (var i = 0; i < result.length; i++) {
 
-            $('.box_resu').prepend('<tr><td>' + result[i].Entrada + '</td><td>' + result[i].Saida + '</td><td>' + result[i].capPlaca + '</td><td>' + result[i].Permi + '</td></tr>');
+            $('.box_resu').prepend('<tr><td>' + result[i].Entrada + '</td><td>' + result[i].Saida + '</td><td>' + result[i].capPlaca + '</td><td>' + result[i].Permi + '</td><td><a href="#" class="btn-floating blue"><i class="material-icons">check</i></a><a href="#" class="btn-floating blue"><i class="material-icons">close</i></a><a href="#" class="btn-floating blue"><i class="material-icons">list</i></a></td></tr>');
         }
     });
     setTimeout(getHistorico, 10000);
 }
 getHistorico();
 
-function getUsuarios() {
+/*function getUsuarios() {
     $.ajax({
         url: 'controlePhp/usuarios.php',
         method: 'GET',
@@ -32,7 +32,7 @@ function getUsuarios() {
             $('.box_usu').prepend('<tr><td>' + result[i].CPF + '</td><td>' + result[i].Nome + '</td></tr>');
         }
     });
-}
+}*/
 function getUsuarios() {
     $.ajax({
         url: 'controlePhp/usuarios.php',
