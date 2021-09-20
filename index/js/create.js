@@ -13,10 +13,12 @@ $('#form1').submit(function(e){
     $.ajax({
         url: 'insert/insertBD.php',
         method: 'POST',
-        data: {nomeCat: $nomeCat, nPermi: $nPermi},
+        data: {nomeCat: nomeCat, nPermi: nPermi},
         dataType: 'json'
     }).done(function(result){
+        $('#nomeCat').val('');
+        $('#nPermi').val('');
         console.log(result);
+      
     });
-
 });
