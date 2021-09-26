@@ -12,7 +12,7 @@ function getHistorico() {
         $('.box_resu').empty();
         for (var i = 0; i < result.length; i++) {
 
-            $('.box_resu').prepend('<tr><td>' + result[i].Entrada + '</td><td>' + result[i].Saida + '</td><td>' + result[i].capPlaca + '</td><td>' + result[i].Permi + '</td><td><a href="#" class="btn-floating blue"><i class="material-icons">check</i></a><a href="#" class="btn-floating blue"><i class="material-icons">close</i></a><a class="btn-floating blue"onclick="abrirPag('+"'"+'read/detalhesHistorico.php'+"'"+');"><i class="material-icons">list</i></a></td></tr>');
+            $('.box_resu').prepend('<tr><td>' + result[i].Entrada + '</td><td>' + result[i].Saida + '</td><td>' + result[i].capPlaca + '</td><td>' + result[i].Permi + '</td><td><a href="#" class="btn-floating blue"><i class="material-icons">check</i></a><a href="#" class="btn-floating blue"><i class="material-icons">close</i></a><a class="btn-floating blue"onclick="abrirPag('+"'"+'read/detalhesHistorico.php?id='+result[i].id+"'"+');"><i class="material-icons">list</i></a></td></tr>');
         }
     });
     setTimeout(getHistorico, 10000);
