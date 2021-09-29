@@ -1,7 +1,5 @@
 
-function myFunction(){
-    alert('Olá');
-}
+
 function getHistorico() {
     $.ajax({
         url: 'controlePhp/historico.php',

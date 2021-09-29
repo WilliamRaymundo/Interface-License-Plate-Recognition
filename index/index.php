@@ -69,6 +69,7 @@ $result_query = mysqli_query($conexao, $query ) or die(' Erro na query:' );
 
   <script src="js/main.js"></script>
   <script src="js/materialize.js"></script>
+  <script src="js/create.js"></script>
 
   </body>
 </html>

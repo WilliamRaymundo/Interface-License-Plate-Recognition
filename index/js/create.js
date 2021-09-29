@@ -1,9 +1,9 @@
 
 function myFunction(){
-    alert('Olá');
+    alert('OláSSS');
 }
 
-$('#form1').submit(function(e){
+$('#forma1').submit(function(e){
     e.preventDefault();
 
     var nomeCat = $('#nomeCat').val();
