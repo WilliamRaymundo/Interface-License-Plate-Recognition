@@ -3,22 +3,24 @@ function myFunction(){
     alert('OláSSS');
 }
 
+
 $('#forma1').submit(function(e){
     e.preventDefault();
+    
 
-    var nomeCat = $('#nomeCat').val();
-    var nPermi = $('#nPermi').val();
-    alert('Olá');
+    var u_name = $('#nomeCat').val();
+    var u_comment = $('#nPermi').val();
 
+    //console.log(u_name, u_comment);
     $.ajax({
         url: 'insert/insertBD.php',
         method: 'POST',
-        data: {nomeCat: nomeCat, nPermi: nPermi},
+        data: {name: u_name, comment:u_comment},
         dataType: 'json'
     }).done(function(result){
         $('#nomeCat').val('');
         $('#nPermi').val('');
         console.log(result);
-      
+        /*getComments();*/
     });
 });

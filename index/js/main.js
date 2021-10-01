@@ -41,7 +41,7 @@ function getUsuarios() {
         $('.box_usu').empty();
         for (var i = 0; i < result.length; i++) {
 
-            $('.box_usu').prepend('<tr><td>' + result[i].CPF + '</td><td>' + result[i].Nome + '</td><td><a href="#" class="btn-floating orange"><i class="material-icons">edit</i></a><a href="#" class="btn-floating red"><i class="material-icons">delete</i></a></td></tr>');
+            $('.box_usu').prepend('<tr><td>' + result[i].CPF + '</td><td>' + result[i].Nome + '</td><td><a href="#" class="btn-floating blue"><i class="material-icons">edit</i></a><a href="#" class="btn-floating blue"><i class="material-icons">delete</i></a></td></tr>');
         }
     });
 }
@@ -55,7 +55,7 @@ function getVeiculos() {
         $('.box_vei').empty();
         for (var i = 0; i < result.length; i++) {
 
-            $('.box_vei').prepend('<tr><td>' + result[i].placa + '</td><td>' + result[i].permi + '</td></tr>');
+            $('.box_vei').prepend('<tr><td>' + result[i].placa + '</td><td>' + result[i].permi + '</td><td><a href="#" class="btn-floating blue"><i class="material-icons">edit</i></a><a href="#" class="btn-floating blue"><i class="material-icons">delete</i></a></td></tr>');
         }
     });
 }
