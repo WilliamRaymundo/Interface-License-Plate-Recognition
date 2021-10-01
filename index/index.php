@@ -25,7 +25,7 @@ $result_query = mysqli_query($conexao, $query ) or die(' Erro na query:' );
 
   </head>
   <body>
-    
+    <!--
   <form id="forma1">
       
       <div class="input-field col s12">
@@ -43,7 +43,7 @@ $result_query = mysqli_query($conexao, $query ) or die(' Erro na query:' );
       
       <input type="submit" form="forma1" class="btn" value="Enviar"/>
   </form>
-
+-->
 
   <ul>
     <li><img src="img/logo.png" alt=""></li>
@@ -53,6 +53,31 @@ $result_query = mysqli_query($conexao, $query ) or die(' Erro na query:' );
 
   </ul>
   <div id="formulario">
+  <button class="waves-effect waves-teal btn-flat" ><i class="material-icons" onclick="fecharPagUsu()">close</i></button>
+  <div class="row">
+    
+    <div class="col s12 m10 push-m1">
+      <h3 class="light" onclick="myFunction()">Novo Tipo Usuário</h3>
+
+    <form id='forma1'>
+      
+        <div class="input-field col s12">
+            <input type="text" name="nomeCat" id='nomeCat'>
+            <label for="nomeCat">Nome tipo</label>
+        </div>
+
+
+        <div class="input-field col s12">
+            <input type="number" min="1" max="99" name="nPermi" id='nPermi'>
+            <label for="nPermi">Permissão</label>
+        
+        </div>
+
+        
+        <input type="submit" form='forma1' class="btn" value="Enviar"/>
+    </form>
+    </div>
+    </div>
 </div>
 <div id="menu">
 <h3>Histórico</h3>

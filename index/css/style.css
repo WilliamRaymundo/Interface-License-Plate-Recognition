@@ -80,7 +80,7 @@ ul {
 }
 #formulario {
 	animation: yourAnimation 3s ease 0s normal none;
-	display: none;
+	display: block;
 	background-color: #ffffff;
 	width: 50%;
 	height: auto;
