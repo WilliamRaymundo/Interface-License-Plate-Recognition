@@ -42,7 +42,7 @@ $result_query = mysqli_query($conexao, $query ) or die(' Erro na query:' );
         </div>
 
         <div class="input-field col s12">
-            <input type="text" name="senha" id="senha">
+            <input type="password" name="senha" id="senha">
             <label for="senha">Senha</label>
         
         </div>
@@ -54,7 +54,7 @@ $result_query = mysqli_query($conexao, $query ) or die(' Erro na query:' );
 # Exibe os registros na tela 
 while ($row = mysqli_fetch_array( $result_query )) 
 { 
-  ?><option value="<?php print $row['nivelPermi']; ?>">  <?php print $row['nomeCat']; ?> </option> <?php
+  ?><option id="fk_nivel" value="<?php print $row['nivelPermi']; ?>">  <?php print $row['nomeCat']; ?> </option> <?php
 }
 
 ?>
