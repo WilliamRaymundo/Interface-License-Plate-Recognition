@@ -9,7 +9,7 @@ $('#forma1').submit(function(e){
     alert("foi");
 
     var u_button = $('#button-sub').attr('name');
-    alert(u_button);
+    
 
     switch (u_button) {
         case "tipoUsuario":
@@ -29,18 +29,21 @@ $('#forma1').submit(function(e){
             break;
 
         case "Usuario":
+            alert(u_button);
             var u_CPF = $('#CPF').val();
             var u_nome = $('#nome').val();
             var u_senha = $('#senha').val();
             var u_nivel = $('#fk_nivel').val();
+            alert(u_nivel);
             $.ajax({
                 url: 'insert/insertBD.php',
                 method: 'POST',
-                data: {name: u_name, comment:u_comment},
+                data: {CPF: u_CPF, nome:u_nome, senha:u_senha, nivel:u_nivel, button:u_button},
                 dataType: 'json'
             }).done(function(result){
-                $('#nomeCat').val('');
-                $('#nPermi').val('');
+                $('#CPF').val('');
+                $('#nome').val('');
+                $('#senha').val('');
                 console.log(result);
                 /*getComments();*/
             });

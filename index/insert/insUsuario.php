@@ -48,13 +48,13 @@ $result_query = mysqli_query($conexao, $query ) or die(' Erro na query:' );
         </div>
 
         <label>Tipo Usuário</label>
-  <select class="browser-default">
+  <select class="browser-default" id="fk_nivel">
   <?php
 
 # Exibe os registros na tela 
 while ($row = mysqli_fetch_array( $result_query )) 
 { 
-  ?><option id="fk_nivel" value="<?php print $row['nivelPermi']; ?>">  <?php print $row['nomeCat']; ?> </option> <?php
+  ?><option value="<?php print $row['id']; ?>">  <?php print $row['nomeCat']; ?> </option> <?php
 }
 
 ?>
