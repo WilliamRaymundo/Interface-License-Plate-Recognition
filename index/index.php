@@ -52,8 +52,9 @@ $result_query = mysqli_query($conexao, $query ) or die(' Erro na query:' );
     <li><a href="#"id="veiculos"><span class="material-icons"><p class="icon">dashboard</p></span></a></li>
 
   </ul>
+  <form id='forma1'>
   <div id="formulario">
-  <button class="waves-effect waves-teal btn-flat" ><i class="material-icons" onclick="fecharPagUsu()">close</i></button>
+  <!-- <button class="waves-effect waves-teal btn-flat" ><i class="material-icons" onclick="fecharPagUsu()">close</i></button>
   <div class="row">
     
     <div class="col s12 m10 push-m1">
@@ -77,8 +78,9 @@ $result_query = mysqli_query($conexao, $query ) or die(' Erro na query:' );
         <input type="submit" form='forma1' class="btn" value="Enviar"/>
     </form>
     </div>
-    </div>
+    </div> -->
 </div>
+</form>
 <div id="menu">
 <h3>Histórico</h3>
 

@@ -23,12 +23,12 @@ $result_query = mysqli_query($conexao, $query ) or die(' Erro na query:' );
 </head>
 
 <body>
-  <button class="waves-effect waves-teal btn-flat" ><i class="material-icons" onclick="fecharPagUsu()">close</i></button>
+  <button class="waves-effect waves-teal btn-flat" type="button" ><i class="material-icons" onclick="fecharPagUsu()">close</i></button>
   <div class="row">
     
     <div class="col s12 m10 push-m1">
       <h3 class="light">Novo Usuário</h3>
-    <form>
+    
       
         <div class="input-field col s12">
             <input type="text" name="CPF" id="CPF">
@@ -60,8 +60,8 @@ while ($row = mysqli_fetch_array( $result_query ))
 ?>
  </select>
  <br>
-        <button type="submit" class="btn">Cadastrar</button>
-    </form>
+        <input type="submit" form='forma1' id='button-sub' class="btn" value="Enviar" name='Usuario'/>
+  
     </div>
     </div>
 

@@ -6,7 +6,10 @@ function myFunction(){
 
 $('#forma1').submit(function(e){
     e.preventDefault();
-    
+    alert("foi");
+
+    var u_button = $('#button-sub').attr('name');
+    alert(u_button);
 
     var u_name = $('#nomeCat').val();
     var u_comment = $('#nPermi').val();
