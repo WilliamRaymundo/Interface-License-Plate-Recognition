@@ -53,6 +53,7 @@ $result_query = mysqli_query($conexao, $query ) or die(' Erro na query:' );
 
   </ul>
   <form id='forma1'>
+  
   <div id="formulario">
   <!-- <button class="waves-effect waves-teal btn-flat" ><i class="material-icons" onclick="fecharPagUsu()">close</i></button>
   <div class="row">

@@ -100,7 +100,7 @@ function abrirPag(valor){
     xmlRequest.send(null);
  
         if (xmlRequest.readyState == 1) {
-            document.getElementById("formulario").innerHTML = "<h1>Olá</h1>";
+            document.getElementById("formulario").innerHTML = "<h1></h1>";
         }
  
     return url;
