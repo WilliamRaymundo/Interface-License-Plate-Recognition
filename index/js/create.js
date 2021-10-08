@@ -58,7 +58,8 @@ $('#forma1').submit(function(e){
                     data: {Especie: u_Especie, Cor: u_Cor, nPermi:u_nPermi, button:u_button},
                     dataType: 'json'
                 }).done(function(result){
-                    $('#nomeCat').val('');
+                    $('#Especie').val('');
+                    $('#Cor').val('');
                     $('#nPermi').val('');
                     console.log(result);
                     /*getComments();*/

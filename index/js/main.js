@@ -76,7 +76,7 @@ $("#historico").click(function () {
 
 $("#veiculos").click(function () {
     $('#menu').empty();
-    $('#menu').prepend('<h3>Veículo</h3><section class="content"><a class="btn" onclick="abrirPag('+"'"+'insert/insUsuario.php'+"'"+');">Adicionar</a><a class="btn" onclick="abrirPag('+"'"+'insert/insTipoVeiculo.php'+"'"+');">Criar Tipo</a><table class="striped"><thead><tr><th>Placa</th><th>Permissão</th><th>Ação</th> </tr><thead><tbody class="box_vei"><tbody></table></section>');
+    $('#menu').prepend('<h3>Veículo</h3><section class="content"><a class="btn" onclick="abrirPag('+"'"+'insert/insVeiculo.php'+"'"+');">Adicionar</a><a class="btn" onclick="abrirPag('+"'"+'insert/insTipoVeiculo.php'+"'"+');">Criar Tipo</a><table class="striped"><thead><tr><th>Placa</th><th>Permissão</th><th>Ação</th> </tr><thead><tbody class="box_vei"><tbody></table></section>');
     getVeiculos();
 });
 
