@@ -21,14 +21,14 @@
     
       
         <div class="input-field col s12">
-            <input type="text" name="nomeCat" id='nomeCat'>
-            <label for="nomeCat">Especie</label>
+            <input type="text" name="Especie" id='Especie'>
+            <label for="Especie">Especie</label>
         </div>
 
 
         <div class="input-field col s12">
-            <input type="number" min="1" max="99" name="nPermi" id='nPermi'>
-            <label for="nPermi">Cor</label>
+            <input type="number" min="1" max="99" name="Cor" id='Cor'>
+            <label for="Cor">Cor</label>
         
         </div>
         <div class="input-field col s12">
@@ -38,7 +38,7 @@
         </div>
 
         
-        <input type="submit" form='forma1' id='button-sub' class="btn" value="Enviar" name='tipoUsuario'/>
+        <input type="submit" form='forma1' id='button-sub' class="btn" value="Enviar" name='tipoVeiculo'/>
     
     </div>
     </div>

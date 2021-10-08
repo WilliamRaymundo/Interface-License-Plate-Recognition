@@ -48,6 +48,22 @@ $('#forma1').submit(function(e){
                 /*getComments();*/
             });
             break;
+            case "tipoVeiculo":
+                var u_Especie = $('#Especie').val();
+                var u_Cor = $('#Cor').val();
+                var u_nPermi = $('#nPermi').val();
+                $.ajax({
+                    url: 'insert/insertBD.php',
+                    method: 'POST',
+                    data: {Especie: u_Especie, Cor: u_Cor, nPermi:u_nPermi, button:u_button},
+                    dataType: 'json'
+                }).done(function(result){
+                    $('#nomeCat').val('');
+                    $('#nPermi').val('');
+                    console.log(result);
+                    /*getComments();*/
+                });
+                break;    
 
         case "Julho":
             console.log("Inverno!");

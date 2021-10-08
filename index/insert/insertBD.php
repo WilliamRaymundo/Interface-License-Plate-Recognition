@@ -43,6 +43,24 @@
                 echo json_encode('Falha ao salvar comentário');
             }
             break;
+            case "tipoVeiculo":
+                $_Especie = $_POST['Especie'];
+                $_Cor = $_POST['Cor'];
+                $_nPermi = $_POST['nPermi'];
+                $stmt = $pdo->prepare('INSERT INTO tipoveiculo (especie, cor, permissao) VALUES (:na, :co, :sa)');
+                $stmt -> bindValue(':na', $_Especie );
+                $stmt -> bindValue(':co', $_Cor);
+                $stmt -> bindValue(':sa', $_Cor);
+                $stmt->execute();
+    
+                
+                if ($stmt->rowCount() >= 1) {
+                    echo json_encode('Comentário Salvo com Sucesso');
+                } else {
+                    echo json_encode('Falha ao salvar comentário');
+                }
+                break;
+
         case 2:
             echo "i equals 2";
             break;
