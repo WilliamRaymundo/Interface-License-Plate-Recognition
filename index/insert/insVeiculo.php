@@ -29,6 +29,15 @@ $result_query = mysqli_query($conexao, $query ) or die(' Erro na query:' );
     <div class="col s12 m10 push-m1">
       <h3 class="light">Novo Veículo</h3>
     
+      <div class="associar">
+      <div class="input-field col s12">
+            <input type="text" name="Associar" id="Associar">
+            <label for="Associar">Nome Usuário</label>
+        </div>
+      <input type="button" onclick="abrirPag('insert/insAssociar.php')"  id='button-sub' class="btn" value="Associar Usuario" name='Usuario'/>
+       
+      
+      </div>
       
         <div class="input-field col s12">
             <input type="text" name="Placa" id="Placa">
