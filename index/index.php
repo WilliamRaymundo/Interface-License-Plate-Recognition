@@ -21,10 +21,12 @@ $result_query = mysqli_query($conexao, $query ) or die(' Erro na query:' );
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
-
-
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
   </head>
   <body>
+    
     <!--
   <form id="forma1">
       
@@ -45,7 +47,7 @@ $result_query = mysqli_query($conexao, $query ) or die(' Erro na query:' );
   </form>
 -->
 
-  <ul>
+  <ul class="menu">
     <li><img src="img/logo.png" alt=""></li>
     <li><a href="#" id="historico"><span class="material-icons"><p class="icon">list</p></span></a></li>
     <li><a href="#" id="usuarios"><span class="material-icons"><p class="icon"> face</p></span></a></li>
@@ -86,11 +88,22 @@ $result_query = mysqli_query($conexao, $query ) or die(' Erro na query:' );
 <h3>Histórico</h3>
 
 
-
   <section class="content">
+   
+
         <table class="striped">
           <thead>
             <tr>
+            <th><label for="">Selecione seu Estado:</label>
+  <select class="browser-default" id="estado">
+        <option value="AC">Acre</option>
+        <option value="AL">Alagoas</option>
+        <option value="AP">Amapá</option>
+        <option value="AM">Amazonas</option>
+        <option value="BA">Bahia</option>
+
+    </select>
+    </th>
               <th>Entrada</th>
               <th>Saida</th>
               <th>Placa</th>
@@ -109,14 +122,16 @@ $result_query = mysqli_query($conexao, $query ) or die(' Erro na query:' );
 
 
 
-  <script
-  src="https://code.jquery.com/jquery-3.5.1.min.js"
-  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-  crossorigin="anonymous"></script>
+  
 
   <script src="js/main.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/create.js"></script>
+  <script>
+        $(document).ready(function() {
+            $('#estado').select2();
+        });
+    </script>
 
   </body>
 </html>

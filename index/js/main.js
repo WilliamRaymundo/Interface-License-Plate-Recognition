@@ -1,4 +1,6 @@
-
+$(document).ready(function(){
+    $('.estado').select2();
+});
 
 function getHistorico() {
     $.ajax({
