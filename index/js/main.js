@@ -1,6 +1,6 @@
-$(document).ready(function(){
-    $('.estado').select2();
-});
+ $(document).ready(function() {
+            $('#estadoa').select2();
+        });
 
 function getHistorico() {
     $.ajax({
@@ -94,15 +94,23 @@ function GetXMLHttp() {
 
 var xmlRequest = GetXMLHttp();
 
+function myFunction(){
+    alert('OláSSS');
+     $(document).ready(function() {
+            $('#estadoa').select2();
+        });
+}
+
 function abrirPag(valor){
     var url = valor;
- 
+    
     xmlRequest.open("GET",url,true);    
     xmlRequest.onreadystatechange = mudancaEstado;
     xmlRequest.send(null);
  
         if (xmlRequest.readyState == 1) {
             document.getElementById("formulario").innerHTML = "<h1></h1>";
+            myFunction();
         }
  
     return url;

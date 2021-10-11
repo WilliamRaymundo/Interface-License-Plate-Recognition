@@ -1,6 +1,9 @@
 
 function myFunction(){
     alert('OláSSS');
+     $(document).ready(function() {
+            $('#estadoa').select2();
+        });
 }
 
 
