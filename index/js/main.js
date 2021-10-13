@@ -129,5 +129,7 @@ function fecharPagUsu(){
 function alterar(){
     document.getElementById('aassociar').style.display = 'inline-block';
     document.getElementById('button-sub-asso').style.display = 'none';
+    document.getElementById('button-sub-ex-asso').style.display = 'inline-block';
+    
    
 }

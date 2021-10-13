@@ -9,7 +9,7 @@ $hostname = "localhost";
 # Conecta com o servidor de banco de dados 
 $conexao = mysqli_connect( $hostname, $user, $password ) or die( ' Erro na conexão ' ); 
 mysqli_select_db($conexao, $database);
-$query = "SELECT * FROM tipousuario"; 
+$query = "SELECT * FROM usuario"; 
 $result_query = mysqli_query($conexao, $query ) or die(' Erro na query:' );
 ?>
 <html>
@@ -39,7 +39,7 @@ $result_query = mysqli_query($conexao, $query ) or die(' Erro na query:' );
 # Exibe os registros na tela 
 while ($row = mysqli_fetch_array( $result_query )) 
 { 
-  ?><option value="<?php print $row['id']; ?>">  <?php print $row['nomeCat']; ?> </option> <?php
+  ?><option value="<?php print $row['id']; ?>">  <?php print $row['Nome']; ?> </option> <?php
 }
 
 ?>
@@ -51,7 +51,8 @@ while ($row = mysqli_fetch_array( $result_query ))
             <input type="text" name="Associar" id="Associar">
             <label for="Associar">Nome Usuário</label>
         </div> -->
-      <input type="button" onclick="alterar()"  id='button-sub-asso' class="btn" value="Associar Usuario" name='Usuario'/> 
+      <input type="button" onclick="alterar()"  id='button-sub-asso' class="btn" value="Associar Usuario" name='Usuario'/>
+      <a id="button-sub-ex-asso" href="#" class="btn-floating red"><i class="material-icons">close</i></a>
        
       
   
