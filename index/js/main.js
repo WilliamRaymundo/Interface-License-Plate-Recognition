@@ -126,3 +126,8 @@ function mudancaEstado(){
 function fecharPagUsu(){
     document.getElementById('formulario').style.display = 'none';
 }
+function alterar(){
+    document.getElementById('aassociar').style.display = 'inline-block';
+    document.getElementById('button-sub-asso').style.display = 'none';
+   
+}

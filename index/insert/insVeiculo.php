@@ -31,16 +31,30 @@ $result_query = mysqli_query($conexao, $query ) or die(' Erro na query:' );
     
     <div class="col s12 m10 push-m1">
       <h3 class="light"  onclick="myFunction()">Novo Veículo</h3>
-    
-      <div class="associar">
+      <div id="aassociar">
+      <select class="js-example-basic-single js-states form-control" id="estadoa">
+      <option>--</option>
+  <?php
+
+# Exibe os registros na tela 
+while ($row = mysqli_fetch_array( $result_query )) 
+{ 
+  ?><option value="<?php print $row['id']; ?>">  <?php print $row['nomeCat']; ?> </option> <?php
+}
+
+?>
+ </select> 
+</div>
+      
+        <!--
       <div class="input-field col s12">
             <input type="text" name="Associar" id="Associar">
             <label for="Associar">Nome Usuário</label>
-        </div>
-      <input type="button" onclick="abrirPag('insert/insAssociar.php')"  id='button-sub' class="btn" value="Associar Usuario" name='Usuario'/>
+        </div> -->
+      <input type="button" onclick="alterar()"  id='button-sub-asso' class="btn" value="Associar Usuario" name='Usuario'/> 
        
       
-      </div>
+  
       
         <div class="input-field col s12">
             <input type="text" name="Placa" id="Placa">
@@ -52,7 +66,7 @@ $result_query = mysqli_query($conexao, $query ) or die(' Erro na query:' );
             <label for="Permi">Permi</label>
         
         </div>
-
+  <!--
       <label>Tipo Usuário</label>
         <select class="browser-default" id="estadoa">
         <option value="AC">Acre</option>
@@ -62,18 +76,8 @@ $result_query = mysqli_query($conexao, $query ) or die(' Erro na query:' );
         <option value="BA">Bahia</option>
 
     </select>
-    <!--  
-  <select class="browser-default" id="fk_nivel">
-  <?php
+-->
 
-# Exibe os registros na tela 
-while ($row = mysqli_fetch_array( $result_query )) 
-{ 
-  ?><option value="<?php print $row['id']; ?>">  <?php print $row['nomeCat']; ?> </option> <?php
-}
-
-?>
- </select> -->
  <br>
         <input type="submit" form='forma1' id='button-sub' class="btn" value="Enviar" name='Usuario'/>
   
