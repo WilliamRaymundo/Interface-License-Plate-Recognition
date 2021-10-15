@@ -9,7 +9,7 @@ $hostname = "localhost";
 # Conecta com o servidor de banco de dados 
 $conexao = mysqli_connect( $hostname, $user, $password ) or die( ' Erro na conexão ' ); 
 mysqli_select_db($conexao, $database);
-$query = "SELECT * FROM tipousuario"; 
+$query = "SELECT * FROM tipoUsuario"; 
 $result_query = mysqli_query($conexao, $query ) or die(' Erro na query:' );
 ?>
 <html>
@@ -94,16 +94,6 @@ $result_query = mysqli_query($conexao, $query ) or die(' Erro na query:' );
         <table class="striped">
           <thead>
             <tr>
-            <th><label for="">Selecione seu Estado:</label>
-  <select class="browser-default" id="estado">
-        <option value="AC">Acre</option>
-        <option value="AL">Alagoas</option>
-        <option value="AP">Amapá</option>
-        <option value="AM">Amazonas</option>
-        <option value="BA">Bahia</option>
-
-    </select>
-    </th>
               <th>Entrada</th>
               <th>Saida</th>
               <th>Placa</th>
