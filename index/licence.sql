@@ -2,10 +2,10 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Oct 18, 2021 at 01:19 AM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 8.0.11
+-- Host: 127.0.0.1
+-- Tempo de geração: 18-Out-2021 às 23:57
+-- Versão do servidor: 10.4.21-MariaDB
+-- versão do PHP: 7.4.24
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,17 +18,18 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `licence`
+-- Banco de dados: `licence`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `historico`
+-- Estrutura da tabela `historico`
 --
 
 CREATE TABLE `historico` (
   `id` int(11) NOT NULL,
+  `fk_local` int(11) NOT NULL,
   `entrada` datetime NOT NULL,
   `saida` datetime NOT NULL,
   `capPlaca` varchar(255) NOT NULL,
@@ -37,16 +38,16 @@ CREATE TABLE `historico` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `historico`
+-- Extraindo dados da tabela `historico`
 --
 
-INSERT INTO `historico` (`id`, `entrada`, `saida`, `capPlaca`, `permi`, `captura`) VALUES
-(1, '2001-01-01 00:00:00', '2001-01-01 00:00:00', '[value-4]', 1, '[value-6]');
+INSERT INTO `historico` (`id`, `fk_local`, `entrada`, `saida`, `capPlaca`, `permi`, `captura`) VALUES
+(2, 1, '2008-11-11 13:23:44', '2008-11-11 13:23:44', '[value-5]', 1, '[value-7]');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `local`
+-- Estrutura da tabela `local`
 --
 
 CREATE TABLE `local` (
@@ -55,25 +56,39 @@ CREATE TABLE `local` (
   `cep` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Extraindo dados da tabela `local`
+--
+
+INSERT INTO `local` (`id`, `endereco`, `cep`) VALUES
+(1, '[value-2]', '[value-3]');
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tipoUsuario`
+-- Estrutura da tabela `tipousuario`
 --
 
-CREATE TABLE `tipoUsuario` (
+CREATE TABLE `tipousuario` (
   `id` int(11) NOT NULL,
   `nomeUser` varchar(255) NOT NULL,
   `nivelPermi` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Extraindo dados da tabela `tipousuario`
+--
+
+INSERT INTO `tipousuario` (`id`, `nomeUser`, `nivelPermi`) VALUES
+(1, 'adsasd', 2);
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tipoVeiculo`
+-- Estrutura da tabela `tipoveiculo`
 --
 
-CREATE TABLE `tipoVeiculo` (
+CREATE TABLE `tipoveiculo` (
   `id` int(11) NOT NULL,
   `especie` varchar(255) NOT NULL,
   `permissao` double NOT NULL,
@@ -83,20 +98,28 @@ CREATE TABLE `tipoVeiculo` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `usuario`
+-- Estrutura da tabela `usuario`
 --
 
 CREATE TABLE `usuario` (
   `id` int(11) NOT NULL,
+  `fk_tipoUser` int(11) NOT NULL,
   `CPF` varchar(255) NOT NULL,
   `Nome` varchar(255) NOT NULL,
   `Senha` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Extraindo dados da tabela `usuario`
+--
+
+INSERT INTO `usuario` (`id`, `fk_tipoUser`, `CPF`, `Nome`, `Senha`) VALUES
+(1, 1, 'ww', 'w', 'w');
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `veiculo`
+-- Estrutura da tabela `veiculo`
 --
 
 CREATE TABLE `veiculo` (
@@ -106,84 +129,109 @@ CREATE TABLE `veiculo` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Indexes for dumped tables
+-- Extraindo dados da tabela `veiculo`
+--
+
+INSERT INTO `veiculo` (`id`, `placa`, `permi`) VALUES
+(1, '[value-2]', 1);
+
+--
+-- Índices para tabelas despejadas
 --
 
 --
--- Indexes for table `historico`
+-- Índices para tabela `historico`
 --
 ALTER TABLE `historico`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_local` (`fk_local`);
 
 --
--- Indexes for table `local`
+-- Índices para tabela `local`
 --
 ALTER TABLE `local`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tipoUsuario`
+-- Índices para tabela `tipousuario`
 --
-ALTER TABLE `tipoUsuario`
+ALTER TABLE `tipousuario`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tipoVeiculo`
+-- Índices para tabela `tipoveiculo`
 --
-ALTER TABLE `tipoVeiculo`
+ALTER TABLE `tipoveiculo`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `usuario`
+-- Índices para tabela `usuario`
 --
 ALTER TABLE `usuario`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_tipoUser` (`fk_tipoUser`);
 
 --
--- Indexes for table `veiculo`
+-- Índices para tabela `veiculo`
 --
 ALTER TABLE `veiculo`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de tabelas despejadas
 --
 
 --
--- AUTO_INCREMENT for table `historico`
+-- AUTO_INCREMENT de tabela `historico`
 --
 ALTER TABLE `historico`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT de tabela `local`
+--
+ALTER TABLE `local`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `local`
+-- AUTO_INCREMENT de tabela `tipousuario`
 --
-ALTER TABLE `local`
+ALTER TABLE `tipousuario`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT de tabela `tipoveiculo`
+--
+ALTER TABLE `tipoveiculo`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tipoUsuario`
---
-ALTER TABLE `tipoUsuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `tipoVeiculo`
---
-ALTER TABLE `tipoVeiculo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `usuario`
+-- AUTO_INCREMENT de tabela `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `veiculo`
+-- AUTO_INCREMENT de tabela `veiculo`
 --
 ALTER TABLE `veiculo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- Restrições para despejos de tabelas
+--
+
+--
+-- Limitadores para a tabela `historico`
+--
+ALTER TABLE `historico`
+  ADD CONSTRAINT `fk_local` FOREIGN KEY (`fk_local`) REFERENCES `local` (`id`);
+
+--
+-- Limitadores para a tabela `usuario`
+--
+ALTER TABLE `usuario`
+  ADD CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`fk_tipoUser`) REFERENCES `tipousuario` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -54,7 +54,7 @@ $result_query = mysqli_query($conexao, $query ) or die(' Erro na query:' );
 # Exibe os registros na tela 
 while ($row = mysqli_fetch_array( $result_query )) 
 { 
-  ?><option value="<?php print $row['id']; ?>">  <?php print $row['nomeCat']; ?> </option> <?php
+  ?><option value="<?php print $row['id']; ?>">  <?php print $row['nomeUser']; ?> </option> <?php
 }
 
 ?>

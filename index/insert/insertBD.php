@@ -10,7 +10,7 @@
         case "tipoUsuario":
             $_nomeCat = $_POST['nomeCat'];
             $_nPermi = $_POST['nPermi'];
-            $stmt = $pdo->prepare('INSERT INTO tipousuario (nomeCat, nivelPermi) VALUES (:na, :co)');
+            $stmt = $pdo->prepare('INSERT INTO tipousuario (nomeUser, nivelPermi) VALUES (:na, :co)');
             $stmt -> bindValue(':na', $_nomeCat );
             $stmt -> bindValue(':co', $_nPermi );
             $stmt->execute();
@@ -29,7 +29,7 @@
             $_nome = $_POST['nome'];
             $_senha = $_POST['senha'];
             $_nivel = $_POST['nivel'];
-            $stmt = $pdo->prepare('INSERT INTO usuario (fk_tipoUsuario, CPF, Nome, Senha) VALUES (:na, :co, :ab, :az)');
+            $stmt = $pdo->prepare('INSERT INTO usuario (fk_tipoUser, CPF, Nome, Senha) VALUES (:na, :co, :ab, :az)');
             $stmt -> bindValue(':na', $_nivel );
             $stmt -> bindValue(':co', $_CPF );
             $stmt -> bindValue(':ab', $_nome );

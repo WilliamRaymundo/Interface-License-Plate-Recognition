@@ -26,10 +26,10 @@ $rowfk = mysqli_fetch_array( $result_queryfk );
    
     <div class="con-nit">
       <table><tr>
-      <tr> <td>Entrada</td> <td><?php print $row['Entrada']; ?></td></tr>
-      <tr> <td> Saída</td> <td> <?php print $row['Saida']; ?></td></tr>
+      <tr> <td>Entrada</td> <td><?php print $row['entrada']; ?></td></tr>
+      <tr> <td> Saída</td> <td> <?php print $row['saida']; ?></td></tr>
       <tr> <td> Placa </td> <td><?php print $row['capPlaca']; ?></td></tr>
-      <tr> <td> Permissão </td> <td><?php print $row['Permi']; ?></td></tr>
+      <tr> <td> Permissão </td> <td><?php print $row['permi']; ?></td></tr>
       <tr> <td> Captura </td> <td><img src="<?php print $row['captura']; ?>"></td></tr>
       <tr> <td> Endereço Local </td> <td><?php print $rowfk['endereco']; ?></td></tr>
       <tr> <td> CEP </td> <td><?php print $rowfk['cep']; ?></td></tr>
