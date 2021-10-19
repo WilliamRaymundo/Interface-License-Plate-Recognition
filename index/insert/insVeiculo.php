@@ -11,6 +11,8 @@ $conexao = mysqli_connect( $hostname, $user, $password ) or die( ' Erro na conex
 mysqli_select_db($conexao, $database);
 $query = "SELECT * FROM usuario"; 
 $result_query = mysqli_query($conexao, $query ) or die(' Erro na query:' );
+$queryi = "SELECT * FROM tipoVeiculo"; 
+$result_queryi = mysqli_query($conexao, $queryi ) or die(' Erro na query:' );
 ?>
 <html>
 
@@ -78,7 +80,17 @@ while ($row = mysqli_fetch_array( $result_query ))
 
     </select>
 -->
+<select class="js-example-basic-single js-states form-control" >
+<?php
 
+# Exibe os registros na tela 
+while ($roww = mysqli_fetch_array( $result_queryi )) 
+{ 
+  ?><option value="<?php print $roww['id']; ?>">  <?php print $roww['especie']; ?> </option> <?php
+}
+
+?>
+</select>
  <br>
         <input type="submit" form='forma1' id='button-sub' class="btn" value="Enviar" name='Usuario'/>
   
