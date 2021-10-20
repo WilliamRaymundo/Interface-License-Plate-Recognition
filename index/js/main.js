@@ -127,9 +127,17 @@ function fecharPagUsu(){
     document.getElementById('formulario').style.display = 'none';
 }
 function alterar(){
+ 
     document.getElementById('aassociar').style.display = 'inline-block';
     document.getElementById('button-sub-asso').style.display = 'none';
     document.getElementById('button-sub-ex-asso').style.display = 'inline-block';
     
-   
+}
+function alterara(){
+    
+    document.getElementById('aassociar').style.display = 'none';
+    document.getElementById('button-sub-asso').style.display = 'inline-block';
+    document.getElementById('button-sub-ex-asso').style.display = 'none';
+     document.getElementById('estadoa').value = "";
+    
 }

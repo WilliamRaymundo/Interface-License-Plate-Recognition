@@ -32,7 +32,7 @@ $result_queryi = mysqli_query($conexao, $queryi ) or die(' Erro na query:' );
   <div class="row">
     
     <div class="col s12 m10 push-m1">
-      <h3 class="light"  onclick="myFunction()">Novo Veículo</h3>
+      <h3 class="light"  onclick="alterar()" >Novo Veículo</h3>
       <div id="aassociar">
       <select class="js-example-basic-single js-states form-control" id="estadoa">
       <option>--</option>
@@ -54,7 +54,7 @@ while ($row = mysqli_fetch_array( $result_query ))
             <label for="Associar">Nome Usuário</label>
         </div> -->
       <input type="button" onclick="alterar()"  id='button-sub-asso' class="btn" value="Associar Usuario" name='Usuario'/>
-      <a id="button-sub-ex-asso" href="#" class="btn-floating red"><i class="material-icons">close</i></a>
+      <a onclick="alterara()" id="button-sub-ex-asso" class="btn-floating red" ><i class="material-icons">close</i></a>
        
       
   
@@ -80,7 +80,7 @@ while ($row = mysqli_fetch_array( $result_query ))
 
     </select>
 -->
-<select class="js-example-basic-single js-states form-control" >
+<select class="js-example-basic-single js-states form-control" id="especie">
 <?php
 
 # Exibe os registros na tela 
@@ -92,7 +92,7 @@ while ($roww = mysqli_fetch_array( $result_queryi ))
 ?>
 </select>
  <br>
-        <input type="submit" form='forma1' id='button-sub' class="btn" value="Enviar" name='Usuario'/>
+        <input type="submit" form='forma1' id='button-sub' class="btn" value="Enviar" name='Veiculo'/>
   
     </div>
     </div>

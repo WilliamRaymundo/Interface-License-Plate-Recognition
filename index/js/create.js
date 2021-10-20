@@ -67,7 +67,27 @@ $('#forma1').submit(function(e){
                     console.log(result);
                     /*getComments();*/
                 });
-                break;    
+                break;
+                case "Veiculo":
+                    var u_associa = $('#estadoa').val();
+                    var u_Placa = $('#Placa').val();
+                    var u_Permi = $('#Permi').val();
+                    var u_Esp = $('#especie').val();
+                    
+                    $.ajax({
+                        url: 'insert/insertBD.php',
+                        method: 'POST',
+                        data: {associa: u_associa, Placa: u_Placa, Permi:u_Permi, especie: u_Esp ,button:u_button},
+                        dataType: 'json'
+                    }).done(function(result){
+                        $('#Especie').val('');
+                        $('#Cor').val('');
+                        $('#nPermi').val('');
+                        console.log(result);
+                        /*getComments();*/
+                    });
+                    break;    
+        
 
         case "Julho":
             console.log("Inverno!");
