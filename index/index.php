@@ -90,7 +90,7 @@ $result_query = mysqli_query($conexao, $query ) or die(' Erro na query:' );
 
   <section class="content">
    
-
+   <a class="btn" onclick="abrirPag('insert/insVeiculo.php')">Adicionar</a>
         <table class="striped">
           <thead>
             <tr>
