@@ -32,7 +32,7 @@ $result_queryi = mysqli_query($conexao, $queryi ) or die(' Erro na query:' );
   <div class="row">
     
     <div class="col s12 m10 push-m1">
-      <h3 class="light"  onclick="alterar()" >Novo Veículo</h3>
+      <h3 class="light"  onclick="alterar()" >Novo Local</h3>
       <div id="aassociar">
       <select class="js-example-basic-single js-states form-control" id="estadoa">
       <option>--</option>
