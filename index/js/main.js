@@ -72,7 +72,7 @@ $("#usuarios").click(function () {
 });
 $("#historico").click(function () {
     $('#menu').empty();
-    $('#menu').prepend('<h3>Histórico</h3><section class="content"><a class="btn" onclick="abrirPag('+"'"+'insert/insVeiculo.php'+"'"+');">Adicionar</a><table class="striped"><thead><tr><th>Entrada</th> <th>Saida</th><th>Placa</th><th>Permissão</th><th>Ação</th> </tr><thead><tbody class="box_resu"><tbody></table></section>');
+    $('#menu').prepend('<h3>Histórico</h3><section class="content"><a class="btn" onclick="abrirPag('+"'"+'insert/insLocal.php'+"'"+');">Adicionar</a><table class="striped"><thead><tr><th>Entrada</th> <th>Saida</th><th>Placa</th><th>Permissão</th><th>Ação</th> </tr><thead><tbody class="box_resu"><tbody></table></section>');
     getHistorico();
 });
 

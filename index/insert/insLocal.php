@@ -61,12 +61,12 @@ while ($row = mysqli_fetch_array( $result_query ))
       
         <div class="input-field col s12">
             <input type="text" name="Placa" id="Placa">
-            <label for="Placa">Placa</label>
+            <label for="Placa">Endereço</label>
         </div>
 
         <div class="input-field col s12">
             <input type="text" name="Permi" id="Permi">
-            <label for="Permi">Permi</label>
+            <label for="Permi">CEP</label>
         
         </div>
   <!--
