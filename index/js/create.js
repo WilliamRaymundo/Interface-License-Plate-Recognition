@@ -1,6 +1,6 @@
 
 function myFunction(){
-    alert('OláSSS');
+    //alert('OláSSS');
      $(document).ready(function() {
             $('#estadoa').select2();
         });
@@ -9,7 +9,7 @@ function myFunction(){
 
 $('#forma1').submit(function(e){
     e.preventDefault();
-    alert("foi");
+   // alert("foi");
 
     var u_button = $('#button-sub').attr('name');
     
@@ -32,12 +32,12 @@ $('#forma1').submit(function(e){
             break;
 
         case "Usuario":
-            alert(u_button);
+           // alert(u_button);
             var u_CPF = $('#CPF').val();
             var u_nome = $('#nome').val();
             var u_senha = $('#senha').val();
             var u_nivel = $('#fk_nivel').val();
-            alert(u_nivel);
+           // alert(u_nivel);
             $.ajax({
                 url: 'insert/insertBD.php',
                 method: 'POST',
@@ -52,6 +52,7 @@ $('#forma1').submit(function(e){
             });
             break;
             case "tipoVeiculo":
+                alert("Olá");
                 var u_Especie = $('#Especie').val();
                 var u_Cor = $('#Cor').val();
                 var u_nPermi = $('#nPermi').val();
@@ -69,6 +70,7 @@ $('#forma1').submit(function(e){
                 });
                 break;
                 case "Veiculo":
+                    alert("Olá");
                     var u_associa = $('#estadoa').val();
                     var u_Placa = $('#Placa').val();
                     var u_Permi = $('#Permi').val();
@@ -80,9 +82,10 @@ $('#forma1').submit(function(e){
                         data: {associa: u_associa, Placa: u_Placa, Permi:u_Permi, especie: u_Esp ,button:u_button},
                         dataType: 'json'
                     }).done(function(result){
-                        $('#Especie').val('');
-                        $('#Cor').val('');
-                        $('#nPermi').val('');
+                        $('#estadoa').val('');
+                        $('#Placa').val('');
+                        $('#Perm').val('');
+                         $('#especie').val('');
                         console.log(result);
                         /*getComments();*/
                     });

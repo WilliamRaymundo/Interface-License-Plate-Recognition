@@ -46,6 +46,7 @@ function getUsuarios() {
             $('.box_usu').prepend('<tr><td>' + result[i].CPF + '</td><td>' + result[i].Nome + '</td><td><a href="#" class="btn-floating blue"><i class="material-icons">edit</i></a><a href="#" class="btn-floating blue"><i class="material-icons">delete</i></a></td></tr>');
         }
     });
+    setTimeout(getUsuarios, 10000);
 }
 function getVeiculos() {
     $.ajax({
@@ -60,6 +61,7 @@ function getVeiculos() {
             $('.box_vei').prepend('<tr><td>' + result[i].placa + '</td><td>' + result[i].permi + '</td><td><a href="#" class="btn-floating blue"><i class="material-icons">edit</i></a><a href="#" class="btn-floating blue"><i class="material-icons">delete</i></a></td></tr>');
         }
     });
+    setTimeout(getVeiculos, 10000);
 }
 
 
@@ -78,7 +80,7 @@ $("#historico").click(function () {
 
 $("#veiculos").click(function () {
     $('#menu').empty();
-    $('#menu').prepend('<h3>Veículo</h3><section class="content"><a class="btn" onclick="abrirPag('+"'"+'insert/insVeiculo.php'+"'"+');">Adicionar</a><a class="btn" onclick="abrirPag('+"'"+'insert/insTipoVeiculo.php'+"'"+');">Criar Tipo</a><table class="striped"><thead><tr><th>Placa</th><th>Permissão</th><th>Ação</th> </tr><thead><tbody class="box_vei"><tbody></table></section>');
+    $('#menu').prepend('<h3>Veículos</h3><section class="content"><a class="btn" onclick="abrirPag('+"'"+'insert/insVeiculo.php'+"'"+');">Adicionar</a><a class="btn" onclick="abrirPag('+"'"+'insert/insTipoVeiculo.php'+"'"+');">Criar Tipo</a><table class="striped"><thead><tr><th>Placa</th><th>Permissão</th><th>Ação</th> </tr><thead><tbody class="box_vei"><tbody></table></section>');
     getVeiculos();
 });
 
@@ -95,7 +97,7 @@ function GetXMLHttp() {
 var xmlRequest = GetXMLHttp();
 
 function myFunction(){
-    alert('OláSSS');
+   // alert('OláSSS');
      $(document).ready(function() {
             $('#estadoa').select2();
         });
